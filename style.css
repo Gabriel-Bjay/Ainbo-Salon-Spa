@@ -1,19 +1,36 @@
-/* General styling for the body and container */
+/* General styling for the body and navbar */
 body{
     margin: 0;
     padding: 0 ;
 }
 
-.container{
+.background-section{
     background-image: url('images/maxresdefault.jpg');
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-size: cover;
     background-color: #464646;
     height: 100vh;
     width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 0;
+    position: relative;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: to make the navbar stand out */
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .nav-list {
@@ -21,7 +38,12 @@ body{
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-around;
+    /* justify-content: flex-end;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0; */
 }
 
 .nav-item {
@@ -93,9 +115,16 @@ body{
     color: white;
     font-size: 30px;
     padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
-@media screen and (max-width: 768px) {
+.material-icons{
+    color: whitesmoke;
+}
+
+@media screen and (max-width: 1024px) {
     .nav-list {
         display: none;
         flex-direction: column;
@@ -120,7 +149,7 @@ body{
     }
 }
 /* Styling for the navigation links */
-.container ul li a {
+.navbar ul li a {
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -130,17 +159,17 @@ body{
     position: relative;
 }
 /* Icon styling */
-.container ul li a i.material-icons {
+.navbar ul li a i.material-icons {
     margin-left: 5px; 
 }
 /* Hover effect for the navigation links */
-.container ul li a:hover {
+.navbar ul li a:hover {
     transform: translateY(-2px); /* Lift the text up */
 }
 
 
 /* Adding the underline effect on hover */
-.container ul li a::after {
+.navbar ul li a::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -153,7 +182,7 @@ body{
     transition: transform 0.3s ease;
 }
 
-.container ul li a:hover::after {
+.navbar ul li a:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
@@ -186,10 +215,14 @@ ul {
 /* Styling for the name-holder */
 .name-holder {
     font-size: 20px;
-    color: rgb(0, 0, 0);
+    color: white;
     text-align: center;
     padding: 10px;
     margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .name-holder a {
     font-size: 20px;
@@ -198,6 +231,86 @@ ul {
     padding: 10px;
     margin: 0;
     text-decoration: none;
+}
+
+#service-section {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.section-heading {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.service-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.service-item img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.service-item h2 {
+    font-size: 24px;
+    margin: 15px 0;
+    color: #333;
+}
+
+.service-item .more-button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 15px 0;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    display: inline-block;
+}
+
+
+.service-item .more-button:hover {
+    background-color: #555;
+    transform: translateY(-3px);
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+}
+
+/* Media query to adjust layout */
+@media (min-width: 768px) {
+    .service-item:nth-child(1),
+    .service-item:nth-child(2),
+    .service-item:nth-child(3) {
+        flex: 1 1 calc(33.333% - 20px);
+    }
+
+    .service-item:nth-child(4),
+    .service-item:nth-child(5) {
+        flex: 1 1 calc(50% - 20px);
+    }
 }
 
 

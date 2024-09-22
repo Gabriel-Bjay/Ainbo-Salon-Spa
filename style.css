@@ -312,6 +312,114 @@ ul {
         flex: 1 1 calc(50% - 20px);
     }
 }
+.publisher-section{
+    padding: 0;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
+}
+.publishers-image{
+    width: 74%;
+    height: 100%;
+    object-fit: cover;
+}
 
+#footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 0;
+    text-align: center;
+}
 
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.section-heading {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color:rgb(255, 255, 255);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.contact-section, .about-section, .quick-links-section, .social-media-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+    padding-bottom: 10px;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-section form input, .contact-section form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 0; 
+    border: 1px solid #ccc;
+    border-radius: 0;
+    box-sizing: border-box;
+}
+
+.contact-section form input:first-of-type {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.contact-section form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.contact-section form input[type="submit"] {
+    background-color: #8778d3;
+    color: #fff;
+    cursor: pointer;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none;
+    margin-top: 10px;
+}
+
+.contact-section form input:focus, .contact-section form textarea:focus {
+    outline: none;
+    border-color: #8778d3;
+}
+
+.social-media-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.social-media-icons a:hover {
+    color: #ddd;
+}
+
+.quick-links-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-links-section ul li {
+    margin: 5px 0;
+}
+
+.quick-links-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.quick-links-section ul li a:hover {
+    text-decoration: underline;
+}

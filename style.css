@@ -403,3 +403,41 @@ ul {
 .quick-links-section ul li a:hover {
     text-decoration: underline;
 }
+/* Spa Page */
+#spa-services {
+    background-color: #170f0f;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    /* margin-right: 50%;
+    padding-left: 20px;
+    border-left: 2px solid #000; */
+}
+
+#spa-services h2 {
+    color: whitesmoke;
+    text-align: left;
+    margin-bottom: 20px;
+    justify-content: left;
+}
+
+#spa-services p {
+    color:whitesmoke;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+#spa-services ol {
+    margin-left: 20px;
+}
+
+#spa-services ol li {
+    margin-bottom: 10px;
+    color: whitesmoke;
+}
+
+.column-list {
+    list-style: disc;
+    display: flex;
+    flex-direction: column;
+}
